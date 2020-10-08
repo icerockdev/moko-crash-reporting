@@ -7,7 +7,7 @@ import MultiPlatformLibrary
 
 class TestViewController: UIViewController {
     
-    let testing = Testing()
+    let testing = Testing(crashlyticsLogger: IosCrashlyticsLogger())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,22 @@ class TestViewController: UIViewController {
     }
     
     @IBAction
-    func onSendEventPressed() {
-
+    func onSetUserId() {
+        testing.setUserId()
+    }
+    
+    @IBAction
+    func onSetCustomValue() {
+        testing.setCustomValue()
+    }
+    
+    @IBAction
+    func onSendRandomLog() {
+        testing.logRandomTestMessage()
+    }
+    
+    @IBAction
+    func onSendException() {
+        testing.logException()
     }
 }

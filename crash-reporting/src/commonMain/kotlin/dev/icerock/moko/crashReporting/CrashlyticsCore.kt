@@ -23,7 +23,7 @@ class CrashlyticsCore(private val logger: CrashlyticsLogger) {
     }
 
     // add custom log string for crashlytics report
-    fun log(logLevel: Napier.Level, tag: String?, message: String?) {
+    fun log(logLevel: Napier.Level, tag: String? = null, message: String? = null) {
         var logText = "${logLevel.name}:"
 
         tag?.let { logText = logText.plus(" $tag - ") }
