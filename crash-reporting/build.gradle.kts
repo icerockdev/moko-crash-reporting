@@ -15,6 +15,7 @@ version = Deps.mokoCrashReportingVersion
 
 dependencies {
     commonMainImplementation(Deps.Libs.MultiPlatform.serialization)
+    commonMainImplementation(Deps.Libs.MultiPlatform.napier.common)
 
     androidMainImplementation(Deps.Libs.Android.appCompat)
 

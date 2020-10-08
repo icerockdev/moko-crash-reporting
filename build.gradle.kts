@@ -13,6 +13,7 @@ allprojects {
 
         maven { url = uri("https://kotlin.bintray.com/kotlin") }
         maven { url = uri("https://kotlin.bintray.com/kotlinx") }
+        maven { url = uri("https://dl.bintray.com/aakira/maven") }
         maven { url = uri("https://dl.bintray.com/icerockdev/moko") }
     }
 

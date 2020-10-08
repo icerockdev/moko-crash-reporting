@@ -9,6 +9,7 @@ object Deps {
 
     private const val androidAppCompatVersion = "1.1.0"
     private const val kotlinxSerializationVersion = "1.0.0-RC"
+    private const val napierVersion = "1.4.1"
 
     const val mokoCrashReportingVersion = "0.1.0"
 
@@ -43,6 +44,12 @@ object Deps {
 
             const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-core:$kotlinxSerializationVersion"
             const val mokoCrashReporting = "dev.icerock.moko:crash-reporting:$mokoCrashReportingVersion"
+            val napier = MultiPlatformLibrary(
+                common = "com.github.aakira:napier:$napierVersion",
+                iosX64 = "com.github.aakira:napier-iosx64:$napierVersion",
+                iosArm64 = "com.github.aakira:napier-iosarm64:$napierVersion"
+            )
+
         }
 
         object Jvm {
