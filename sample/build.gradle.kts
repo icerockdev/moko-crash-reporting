@@ -5,8 +5,12 @@
 subprojects {
     configurations.all {
         resolutionStrategy.dependencySubstitution {
-            substitute(module(Deps.Libs.MultiPlatform.mokoCrashReporting))
-                .with(project(":crash-reporting"))
+            substitute(module(Deps.Libs.MultiPlatform.mokoCrashReportingCore))
+                .with(project(":crash-reporting-core"))
+            substitute(module(Deps.Libs.MultiPlatform.mokoCrashReportingCrashlytics))
+                .with(project(":crash-reporting-crashlytics"))
+            substitute(module(Deps.Libs.MultiPlatform.mokoCrashReportingNapier))
+                .with(project(":crash-reporting-napier"))
         }
     }
 }

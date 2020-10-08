@@ -9,7 +9,7 @@
 import FirebaseCrashlytics
 import MultiPlatformLibrary
 
-class IosCrashlyticsLogger: CrashlyticsLogger {
+class IosCrashlyticsLogger: NativeCrashliticsLogger {
     func log(message: String) {
         Crashlytics.crashlytics().log(message)
     }

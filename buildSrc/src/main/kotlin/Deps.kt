@@ -43,13 +43,14 @@ object Deps {
         object MultiPlatform {
 
             const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-core:$kotlinxSerializationVersion"
-            const val mokoCrashReporting = "dev.icerock.moko:crash-reporting:$mokoCrashReportingVersion"
+            const val mokoCrashReportingCore = "dev.icerock.moko:crash-reporting-core:$mokoCrashReportingVersion"
+            const val mokoCrashReportingCrashlytics = "dev.icerock.moko:crash-reporting-crashlytics:$mokoCrashReportingVersion"
+            const val mokoCrashReportingNapier = "dev.icerock.moko:crash-reporting-napier:$mokoCrashReportingVersion"
             val napier = MultiPlatformLibrary(
                 common = "com.github.aakira:napier:$napierVersion",
                 iosX64 = "com.github.aakira:napier-iosx64:$napierVersion",
                 iosArm64 = "com.github.aakira:napier-iosarm64:$napierVersion"
             )
-
         }
 
         object Jvm {

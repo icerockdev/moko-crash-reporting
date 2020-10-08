@@ -5,28 +5,29 @@
 package com.icerockdev.library
 
 import com.github.aakira.napier.Napier
-import dev.icerock.moko.crashReporting.CrashlyticsAntilog
-import dev.icerock.moko.crashReporting.CrashlyticsCore
-import dev.icerock.moko.crashReporting.CrashlyticsLogger
+import dev.icerock.moko.crashreporting.core.ExceptionLogger
+import dev.icerock.moko.crashreporting.crashlytics.CrashlyticsLogger
+import dev.icerock.moko.crashreporting.crashlytics.NativeCrashliticsLogger
+import dev.icerock.moko.crashreporting.napier.CrashReportingAntilog
 
-class Testing(crashlyticsLogger: CrashlyticsLogger) {
+class Testing(crashlyticsLogger: NativeCrashliticsLogger) {
 
     private val userId = "test_user"
     private val customValue = "test_custom_value"
 
-    private val crashlyticsCore = CrashlyticsCore(crashlyticsLogger)
+    private val logger: ExceptionLogger
 
     init {
-        // use it only for prod, to not send logs to crashlytics while debug - use DebugAntilog(defaultTag: "some tag")
-        Napier.base(CrashlyticsAntilog(core = crashlyticsCore))
+        logger = CrashlyticsLogger(nativeLogger = crashlyticsLogger)
+        Napier.base(antilog = CrashReportingAntilog(exceptionLogger = logger))
     }
 
     fun setUserId() {
-        crashlyticsCore.setUserId(userId)
+        logger.setUserId(userId)
     }
 
     fun setCustomValue() {
-        crashlyticsCore.setCustomValue(value = customValue, forKey = "customKey")
+        logger.setCustomValue(customValue, "customValueKey")
     }
 
     fun logRandomTestMessage() {

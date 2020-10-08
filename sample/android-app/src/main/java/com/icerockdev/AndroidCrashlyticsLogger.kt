@@ -1,8 +1,8 @@
 package com.icerockdev
 
-import dev.icerock.moko.crashReporting.CrashlyticsLogger
+import dev.icerock.moko.crashreporting.crashlytics.NativeCrashliticsLogger
 
-class AndroidCrashlyticsLogger: CrashlyticsLogger {
+class AndroidCrashlyticsLogger: NativeCrashliticsLogger {
     override fun setUserId(userId: String) {
         TODO("Not yet implemented")
     }
