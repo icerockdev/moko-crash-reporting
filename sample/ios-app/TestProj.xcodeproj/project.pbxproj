@@ -13,7 +13,6 @@
 		45F47921219463C7003D25FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F4791A219463C7003D25FA /* Assets.xcassets */; };
 		45F47922219463C7003D25FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4791B219463C7003D25FA /* AppDelegate.swift */; };
 		491EE01E252EC2930050A2B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 491EE01D252EC2920050A2B1 /* GoogleService-Info.plist */; };
-		491EE020252EC31E0050A2B1 /* IosCrashlyticsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491EE01F252EC31E0050A2B1 /* IosCrashlyticsLogger.swift */; };
 		DBA103A546F6F4A9D2B624F1 /* Pods_TestProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E32607656B99E34453202F /* Pods_TestProj.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +26,6 @@
 		45F4791B219463C7003D25FA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45F4791C219463C7003D25FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491EE01D252EC2920050A2B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		491EE01F252EC31E0050A2B1 /* IosCrashlyticsLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosCrashlyticsLogger.swift; sourceTree = "<group>"; };
 		B4E32607656B99E34453202F /* Pods_TestProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20C55B31295727B7A5EFDD6 /* Pods-TestProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProj.debug.xcconfig"; path = "Target Support Files/Pods-TestProj/Pods-TestProj.debug.xcconfig"; sourceTree = "<group>"; };
 		EE0DD21392095FA4F8144C78 /* Pods-TestProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProj.release.xcconfig"; path = "Target Support Files/Pods-TestProj/Pods-TestProj.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 				45F4791C219463C7003D25FA /* Info.plist */,
 				491EE01D252EC2920050A2B1 /* GoogleService-Info.plist */,
 				45D74FCB22BFDDFD00CAB0C8 /* TestViewController.swift */,
-				491EE01F252EC31E0050A2B1 /* IosCrashlyticsLogger.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -246,7 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D74FCC22BFDDFD00CAB0C8 /* TestViewController.swift in Sources */,
-				491EE020252EC31E0050A2B1 /* IosCrashlyticsLogger.swift in Sources */,
 				45F47922219463C7003D25FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

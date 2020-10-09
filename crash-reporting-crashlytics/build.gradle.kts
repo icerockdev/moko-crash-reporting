@@ -32,3 +32,9 @@ publishing {
         }
     }
 }
+
+cocoaPods {
+    podsProject = file("../sample/ios-app/Pods/Pods.xcodeproj")
+
+    pod("FirebaseCrashlytics", onlyLink = false)
+}

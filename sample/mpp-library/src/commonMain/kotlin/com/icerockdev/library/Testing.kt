@@ -7,10 +7,9 @@ package com.icerockdev.library
 import com.github.aakira.napier.Napier
 import dev.icerock.moko.crashreporting.core.ExceptionLogger
 import dev.icerock.moko.crashreporting.crashlytics.CrashlyticsLogger
-import dev.icerock.moko.crashreporting.crashlytics.NativeCrashliticsLogger
 import dev.icerock.moko.crashreporting.napier.CrashReportingAntilog
 
-class Testing(crashlyticsLogger: NativeCrashliticsLogger) {
+class Testing {
 
     private val userId = "test_user"
     private val customValue = "test_custom_value"
@@ -18,7 +17,7 @@ class Testing(crashlyticsLogger: NativeCrashliticsLogger) {
     private val logger: ExceptionLogger
 
     init {
-        logger = CrashlyticsLogger(nativeLogger = crashlyticsLogger)
+        logger = CrashlyticsLogger()
         Napier.base(antilog = CrashReportingAntilog(exceptionLogger = logger))
     }
 

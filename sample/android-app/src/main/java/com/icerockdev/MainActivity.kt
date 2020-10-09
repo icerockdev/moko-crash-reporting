@@ -18,6 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        testing = Testing(AndroidCrashlyticsLogger())
+        testing = Testing()
     }
 }

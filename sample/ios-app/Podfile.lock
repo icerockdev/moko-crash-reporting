@@ -1,12 +1,11 @@
 PODS:
+  - Firebase (6.33.0):
+    - Firebase/Core (= 6.33.0)
   - Firebase/Core (6.33.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.8.3)
   - Firebase/CoreOnly (6.33.0):
     - FirebaseCore (= 6.10.3)
-  - Firebase/Crashlytics (6.33.0):
-    - Firebase/CoreOnly
-    - FirebaseCrashlytics (~> 4.6.1)
   - FirebaseAnalytics (6.8.3):
     - FirebaseCore (~> 6.10)
     - FirebaseInstallations (~> 1.6)
@@ -72,8 +71,8 @@ PODS:
   - PromisesObjC (1.2.10)
 
 DEPENDENCIES:
-  - Firebase/Core (= 6.33.0)
-  - Firebase/Crashlytics
+  - Firebase
+  - FirebaseCrashlytics
   - MultiPlatformLibrary (from `../mpp-library`)
 
 SPEC REPOS:
@@ -108,6 +107,6 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
 
-PODFILE CHECKSUM: 1bb0f68d8aa1780a8fb6ff2aa9ccce9eff649e20
+PODFILE CHECKSUM: 63b9ba3940c44621dba831b110f9f5c9f5cf7b30
 
 COCOAPODS: 1.9.3
