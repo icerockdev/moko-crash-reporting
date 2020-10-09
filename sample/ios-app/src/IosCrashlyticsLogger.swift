@@ -1,10 +1,6 @@
-//
-//  IosCrashlyticsLogger.swift
-//  TestProj
-//
-//  Created by Andrey Dorofeev on 08.10.2020.
-//  Copyright © 2020 IceRock Development. All rights reserved.
-//
+/*
+ * Copyright 2020 IceRock MAG Inc. Use of this source code is governed by the Apache 2.0 license.
+ */
 
 import FirebaseCrashlytics
 import MultiPlatformLibrary

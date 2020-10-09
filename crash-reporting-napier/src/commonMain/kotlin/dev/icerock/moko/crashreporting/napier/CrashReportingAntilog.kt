@@ -1,3 +1,7 @@
+/*
+ * Copyright 2020 IceRock MAG Inc. Use of this source code is governed by the Apache 2.0 license.
+ */
+
 package dev.icerock.moko.crashreporting.napier
 
 import com.github.aakira.napier.Antilog
@@ -12,7 +16,6 @@ class CrashReportingAntilog(private val exceptionLogger: ExceptionLogger) : Anti
         throwable: Throwable?,
         message: String?
     ) {
-
 
         exceptionLogger.log(
             CrashReportingCore().getLogText(
