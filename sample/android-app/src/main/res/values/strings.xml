@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="send_event">Send event</string>
+    <string name="set_user_id">Set User Id</string>
+    <string name="set_custom_key">Set Custom Key</string>
+    <string name="log_message">Log Message</string>
+    <string name="send_non_fatal">Send Non Fatal</string>
 </resources>

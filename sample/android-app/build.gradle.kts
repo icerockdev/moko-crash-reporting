@@ -5,6 +5,8 @@
 plugins {
     plugin(Deps.Plugins.androidApplication)
     plugin(Deps.Plugins.kotlinAndroid)
+    plugin(Deps.Plugins.googleServices)
+    plugin(Deps.Plugins.firebaseCrashlytics)
 }
 
 android {
@@ -46,6 +48,9 @@ android {
 dependencies {
 
     implementation(Deps.Libs.Android.appCompat)
+    implementation(Deps.Libs.Android.firebaseCore)
+    implementation(Deps.Libs.Android.firebaseCrashlytics)
 
     implementation(project("${parent!!.path}:mpp-library"))
 }
+

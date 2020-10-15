@@ -6,6 +6,21 @@ plugins {
     plugin(Deps.Plugins.detekt) apply false
 }
 
+buildscript {
+    repositories {
+        jcenter()
+        google()
+
+        maven { url = uri("https://dl.bintray.com/kotlin/kotlin") }
+        maven { url = uri("https://kotlin.bintray.com/kotlinx") }
+        maven { url = uri("https://plugins.gradle.org/m2/") }
+    }
+    dependencies {
+        plugin(Deps.Plugins.googleServices)
+        plugin(Deps.Plugins.firebaseCrashlytics)
+    }
+}
+
 allprojects {
     repositories {
         google()

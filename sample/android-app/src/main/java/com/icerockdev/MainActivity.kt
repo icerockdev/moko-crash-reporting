@@ -19,5 +19,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         testing = Testing()
+
+        findViewById<Button>(R.id.setUserId).setOnClickListener { testing.setUserId() }
+        findViewById<Button>(R.id.setCustomValue).setOnClickListener { testing.setCustomValue() }
+        findViewById<Button>(R.id.logMessage).setOnClickListener { testing.logRandomTestMessage() }
+        findViewById<Button>(R.id.send_non_fatal).setOnClickListener { testing.logException() }
     }
 }

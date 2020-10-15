@@ -20,6 +20,8 @@ dependencies {
 
     androidMainImplementation(Deps.Libs.Android.appCompat)
 
+    androidMainImplementation(Deps.Libs.Android.firebaseCore)
+    androidMainImplementation(Deps.Libs.Android.firebaseCrashlytics)
 }
 
 publishing {

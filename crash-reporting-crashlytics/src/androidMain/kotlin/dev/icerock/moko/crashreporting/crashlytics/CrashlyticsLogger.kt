@@ -4,22 +4,23 @@
 
 package dev.icerock.moko.crashreporting.crashlytics
 
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dev.icerock.moko.crashreporting.core.ExceptionLogger
 
 actual class CrashlyticsLogger actual constructor() : ExceptionLogger {
     actual override fun log(message: String) {
-        TODO("Not yet implemented")
+        FirebaseCrashlytics.getInstance().log(message)
     }
 
     actual override fun recordException(throwable: Throwable) {
-        TODO("Not yet implemented")
+        FirebaseCrashlytics.getInstance().recordException(throwable)
     }
 
     actual override fun setCustomValue(value: String, forKey: String) {
-        TODO("Not yet implemented")
+        FirebaseCrashlytics.getInstance().setCustomKey(value, forKey)
     }
 
     actual override fun setUserId(userId: String) {
-        TODO("Not yet implemented")
+        FirebaseCrashlytics.getInstance().setUserId(userId)
     }
 }

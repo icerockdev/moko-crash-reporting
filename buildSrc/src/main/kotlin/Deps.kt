@@ -11,6 +11,12 @@ object Deps {
     private const val kotlinxSerializationVersion = "1.0.0-RC"
     private const val napierVersion = "1.4.1"
 
+    private const val googleServicesVersion = "4.3.3"
+    private const val firebaseCrashlyticsPluginVersion = "2.2.0"
+
+    private const val firebaseCoreVersion = "17.4.3"
+    private const val firebaseCrashlyticsVersion = "17.1.0"
+
     const val mokoCrashReportingVersion = "0.1.0"
 
 
@@ -33,19 +39,35 @@ object Deps {
 
         val detekt = GradlePlugin(id = "io.gitlab.arturbosch.detekt", version = detektVersion)
         val iosFramework = GradlePlugin(id = "dev.icerock.mobile.multiplatform.ios-framework")
+
+        val googleServices = GradlePlugin(
+            id = "com.google.gms.google-services",
+            module = "com.google.gms:google-services:$googleServicesVersion"
+        )
+        val firebaseCrashlytics = GradlePlugin(
+            id = "com.google.firebase.crashlytics",
+            module = "com.google.firebase:firebase-crashlytics-gradle:$firebaseCrashlyticsPluginVersion"
+        )
+
     }
 
     object Libs {
         object Android {
             const val appCompat = "androidx.appcompat:appcompat:$androidAppCompatVersion"
+            const val firebaseCore = "com.google.firebase:firebase-core:$firebaseCoreVersion"
+            const val firebaseCrashlytics = "com.google.firebase:firebase-crashlytics:$firebaseCrashlyticsVersion"
         }
 
         object MultiPlatform {
 
-            const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-core:$kotlinxSerializationVersion"
-            const val mokoCrashReportingCore = "dev.icerock.moko:crash-reporting-core:$mokoCrashReportingVersion"
-            const val mokoCrashReportingCrashlytics = "dev.icerock.moko:crash-reporting-crashlytics:$mokoCrashReportingVersion"
-            const val mokoCrashReportingNapier = "dev.icerock.moko:crash-reporting-napier:$mokoCrashReportingVersion"
+            const val serialization =
+                "org.jetbrains.kotlinx:kotlinx-serialization-core:$kotlinxSerializationVersion"
+            const val mokoCrashReportingCore =
+                "dev.icerock.moko:crash-reporting-core:$mokoCrashReportingVersion"
+            const val mokoCrashReportingCrashlytics =
+                "dev.icerock.moko:crash-reporting-crashlytics:$mokoCrashReportingVersion"
+            const val mokoCrashReportingNapier =
+                "dev.icerock.moko:crash-reporting-napier:$mokoCrashReportingVersion"
             val napier = MultiPlatformLibrary(
                 common = "com.github.aakira:napier:$napierVersion",
                 iosX64 = "com.github.aakira:napier-iosx64:$napierVersion",
