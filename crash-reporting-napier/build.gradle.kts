@@ -14,7 +14,6 @@ group = "dev.icerock.moko"
 version = Deps.mokoCrashReportingVersion
 
 dependencies {
-    commonMainImplementation(Deps.Libs.MultiPlatform.serialization)
     commonMainImplementation(Deps.Libs.MultiPlatform.napier.common)
 
     commonMainApi(project(":crash-reporting-core"))

@@ -8,7 +8,6 @@ object Deps {
     private const val detektVersion = "1.7.4"
 
     private const val androidAppCompatVersion = "1.1.0"
-    private const val kotlinxSerializationVersion = "1.0.0-RC"
     private const val napierVersion = "1.4.1"
 
     private const val googleServicesVersion = "4.3.3"
@@ -60,8 +59,6 @@ object Deps {
 
         object MultiPlatform {
 
-            const val serialization =
-                "org.jetbrains.kotlinx:kotlinx-serialization-core:$kotlinxSerializationVersion"
             const val mokoCrashReportingCore =
                 "dev.icerock.moko:crash-reporting-core:$mokoCrashReportingVersion"
             const val mokoCrashReportingCrashlytics =

@@ -14,8 +14,6 @@ group = "dev.icerock.moko"
 version = Deps.mokoCrashReportingVersion
 
 dependencies {
-    commonMainImplementation(Deps.Libs.MultiPlatform.serialization)
-
     commonMainApi(project(":crash-reporting-core"))
 
     androidMainImplementation(Deps.Libs.Android.appCompat)

@@ -10,7 +10,6 @@ plugins {
 }
 
 dependencies {
-    commonMainImplementation(Deps.Libs.MultiPlatform.serialization)
     commonMainImplementation(Deps.Libs.MultiPlatform.napier.common)
     commonMainApi(Deps.Libs.MultiPlatform.mokoCrashReportingCore)
     commonMainApi(Deps.Libs.MultiPlatform.mokoCrashReportingCrashlytics)

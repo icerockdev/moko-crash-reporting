@@ -7,12 +7,7 @@ import MultiPlatformLibrary
 
 class TestViewController: UIViewController {
     
-    let testing = Testing(crashlyticsLogger: IosCrashlyticsLogger())
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    let testing = Testing()
     
     @IBAction
     func onSetUserId() {

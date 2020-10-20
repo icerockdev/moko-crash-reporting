@@ -12,6 +12,6 @@ install! 'cocoapods', :disable_input_output_paths => true
 
 target 'TestProj' do
   pod 'MultiPlatformLibrary', :path => '../mpp-library'
-  pod 'Firebase'
-  pod 'FirebaseCrashlytics'
+  pod 'Firebase', '6.33.0'
+  pod 'FirebaseCrashlytics', '4.6.1'
 end

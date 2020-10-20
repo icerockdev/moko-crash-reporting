@@ -18,5 +18,3 @@ class CrashReportingCore {
         return throwable.noReflectionSimpleName
     }
 }
-
-expect fun CrashReportingCore.getStackTrace(throwable: Throwable): List<Long>
