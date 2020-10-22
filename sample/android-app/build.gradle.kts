@@ -20,7 +20,7 @@ android {
         minSdkVersion(Deps.Android.minSdk)
         targetSdkVersion(Deps.Android.targetSdk)
 
-        applicationId = "dev.icerock.moko.samples.crashreporting"
+        applicationId = "dev.icerock.moko.samples.crashreporting.debug"
 
         versionCode = 1
         versionName = "0.1.0"
@@ -36,7 +36,6 @@ android {
         }
         getByName("debug") {
             isDebuggable = true
-            applicationIdSuffix = ".debug"
         }
     }
 

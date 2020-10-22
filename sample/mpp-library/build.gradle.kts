@@ -21,3 +21,10 @@ framework {
     export(project(":crash-reporting-crashlytics"))
     export(project(":crash-reporting-napier"))
 }
+
+cocoaPods {
+    podsProject = file("../ios-app/Pods/Pods.xcodeproj")
+
+    pod("GoogleUtilities", onlyLink = false)
+    pod("FirebaseCrashlytics", onlyLink = true)
+}

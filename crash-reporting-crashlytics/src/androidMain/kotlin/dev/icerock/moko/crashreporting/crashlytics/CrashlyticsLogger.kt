@@ -7,6 +7,7 @@ package dev.icerock.moko.crashreporting.crashlytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dev.icerock.moko.crashreporting.core.ExceptionLogger
 
+@Suppress("EmptyDefaultConstructor")
 actual class CrashlyticsLogger actual constructor() : ExceptionLogger {
     actual override fun log(message: String) {
         FirebaseCrashlytics.getInstance().log(message)
