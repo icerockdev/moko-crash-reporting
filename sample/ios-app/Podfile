@@ -14,4 +14,23 @@ target 'TestProj' do
   pod 'MultiPlatformLibrary', :path => '../mpp-library'
   pod 'Firebase', '6.33.0'
   pod 'FirebaseCrashlytics', '4.6.1'
+  
+  # Firebase libraries already linked in moko-crash-reporting. Remove duplicated linking.
+  post_install do |installer|
+    host_targets = installer.aggregate_targets.select { |aggregate_target|
+      aggregate_target.name.include? "Pods-"
+    }
+    
+    host_targets.each do |host_target|
+      host_target.xcconfigs.each do |config_name, config_file|
+        config_file.frameworks.delete("FirebaseCore")
+        config_file.frameworks.delete("FirebaseCrashlytics")
+        config_file.frameworks.delete("FirebaseInstallations")
+        config_file.frameworks.delete("GoogleDataTransport")
+        
+        xcconfig_path = host_target.xcconfig_path(config_name)
+        config_file.save_as(xcconfig_path)
+      end
+    end
+  end
 end
