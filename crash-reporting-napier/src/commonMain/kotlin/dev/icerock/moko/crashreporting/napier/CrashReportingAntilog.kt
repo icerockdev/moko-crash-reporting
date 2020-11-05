@@ -16,9 +16,8 @@ class CrashReportingAntilog(private val exceptionLogger: ExceptionLogger) : Anti
         throwable: Throwable?,
         message: String?
     ) {
-
         exceptionLogger.log(
-            CrashReportingCore().getLogText(
+            CrashReportingCore.getLogText(
                 logLevel = priority.name,
                 tag = tag,
                 message = message

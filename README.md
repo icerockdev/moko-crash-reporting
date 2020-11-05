@@ -42,7 +42,7 @@ allprojects {
 project build.gradle
 ```groovy
 dependencies {
-commonMainApi("dev.icerock.moko:crash-reporting-core:0.1.0")
+    commonMainApi("dev.icerock.moko:crash-reporting-core:0.1.0")
     commonMainApi("dev.icerock.moko:crash-reporting-crashlytics:0.1.0") // for CrashlyticsLogger
     commonMainApi("dev.icerock.moko:crash-reporting-napier:0.1.0") // for CrashReportingAntilog
     commonMainImplementation("com.github.aakira:napier:1.4.1") // for CrashReportingAntilog

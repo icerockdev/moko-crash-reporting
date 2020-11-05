@@ -8,14 +8,14 @@ import dev.icerock.moko.crashreporting.core.ExceptionLogger
 import dev.icerock.moko.crashreporting.core.getStackTrace
 
 actual class CrashlyticsLogger actual constructor() : ExceptionLogger {
-    actual override fun log(message: String) {
+    override fun log(message: String) {
         FIRCrashlytics.crashlytics().log(message)
     }
 
     @ExperimentalUnsignedTypes
-    actual override fun recordException(throwable: Throwable) {
-        val crashReportingCore = CrashReportingCore()
-        val name = crashReportingCore.getExceptionName(throwable).orEmpty()
+    override fun recordException(throwable: Throwable) {
+        val crashReportingCore = CrashReportingCore
+        val name = crashReportingCore.getExceptionName(throwable)
         val stackTrace = crashReportingCore.getStackTrace(throwable)
         val exceptionModel = FIRExceptionModel.exceptionModelWithName(
             name = name,
@@ -30,11 +30,11 @@ actual class CrashlyticsLogger actual constructor() : ExceptionLogger {
         FIRCrashlytics.crashlytics().recordExceptionModel(exceptionModel)
     }
 
-    actual override fun setCustomValue(value: String, forKey: String) {
+    override fun setCustomValue(value: String, forKey: String) {
         FIRCrashlytics.crashlytics().setCustomValue(value = value, forKey = forKey)
     }
 
-    actual override fun setUserId(userId: String) {
+    override fun setUserId(userId: String) {
         FIRCrashlytics.crashlytics().setUserID(userId)
     }
 }

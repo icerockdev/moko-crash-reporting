@@ -31,7 +31,6 @@ object Deps {
 
         val kotlinMultiplatform = GradlePlugin(id = "org.jetbrains.kotlin.multiplatform")
         val kotlinAndroid = GradlePlugin(id = "kotlin-android")
-        val kotlinAndroidExtensions = GradlePlugin(id = "kotlin-android-extensions")
 
         val mobileMultiplatform = GradlePlugin(id = "dev.icerock.mobile.multiplatform")
         val mavenPublish = GradlePlugin(id = "org.gradle.maven-publish")

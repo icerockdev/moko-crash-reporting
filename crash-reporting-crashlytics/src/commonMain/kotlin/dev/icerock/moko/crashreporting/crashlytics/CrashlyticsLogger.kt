@@ -7,9 +7,4 @@ package dev.icerock.moko.crashreporting.crashlytics
 import dev.icerock.moko.crashreporting.core.ExceptionLogger
 
 @Suppress("EmptyDefaultConstructor")
-expect class CrashlyticsLogger() : ExceptionLogger {
-    override fun log(message: String)
-    override fun recordException(throwable: Throwable)
-    override fun setCustomValue(value: String, forKey: String)
-    override fun setUserId(userId: String)
-}
+expect class CrashlyticsLogger() : ExceptionLogger

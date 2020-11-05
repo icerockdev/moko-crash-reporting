@@ -4,17 +4,25 @@
 
 package dev.icerock.moko.crashreporting.core
 
-class CrashReportingCore {
+object CrashReportingCore {
 
     fun getLogText(logLevel: String? = null, tag: String? = null, message: String? = null): String {
-        var logText = logLevel?.let { "$it:" }.orEmpty()
 
-        tag?.let { logText = logText.plus(" $tag - ") }
-        message?.let { logText = logText.plus(message) }
-        return logText
+        return buildString {
+            logLevel?.let {
+                append(it)
+                append(": ")
+            }
+
+            tag?.let {
+                append(it)
+                append(" - ")
+            }
+            message?.let { append(message) }
+        }
     }
 
-    fun getExceptionName(throwable: Throwable): String? {
-        return throwable.noReflectionSimpleName
+    fun getExceptionName(throwable: Throwable): String {
+        return throwable::class.simpleName ?: "Unknown"
     }
 }
