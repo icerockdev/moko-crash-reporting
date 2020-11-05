@@ -1,3 +1,4 @@
+![moko-crash-reporting](https://user-images.githubusercontent.com/701307/98216339-818ef400-1f7b-11eb-9273-083389b0f3b9.png)  
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download]
 ![kotlin-version](https://img.shields.io/badge/kotlin-1.4.10-orange)
 
