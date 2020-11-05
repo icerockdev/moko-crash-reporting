@@ -4,6 +4,8 @@
 
 package dev.icerock.moko.crashreporting.core
 
+// Based on Touchlab CrashKiOS (https://github.com/touchlab/CrashKiOS)
+
 fun CrashReportingCore.getStackTrace(throwable: Throwable): List<Long> {
 
     val addresses: List<Long> = throwable.getStackTraceAddresses()
