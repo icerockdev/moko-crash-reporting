@@ -1,4 +1,4 @@
-![moko-crash-reporting](https://user-images.githubusercontent.com/701307/98647508-8979da00-2367-11eb-99ba-6e0e765c10ac.png)  
+![moko-crash-reporting](https://user-images.githubusercontent.com/701307/98647965-37858400-2368-11eb-98e8-6e62d75fa6af.png)  
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download](https://api.bintray.com/packages/icerockdev/moko/moko-crash-reporting/images/download.svg) ](https://bintray.com/icerockdev/moko/moko-crash-reporting/_latestVersion) ![kotlin-version](https://img.shields.io/badge/kotlin-1.4.10-orange)
 
 # Mobile Kotlin crash report
