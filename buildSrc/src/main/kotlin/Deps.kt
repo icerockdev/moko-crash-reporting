@@ -3,8 +3,6 @@
  */
 
 object Deps {
-
-    private const val kotlinVersion = "1.4.10"
     private const val detektVersion = "1.7.4"
 
     private const val androidAppCompatVersion = "1.1.0"
@@ -16,7 +14,7 @@ object Deps {
     private const val firebaseCoreVersion = "17.4.3"
     private const val firebaseCrashlyticsVersion = "17.1.0"
 
-    const val mokoCrashReportingVersion = "0.1.0"
+    const val mokoCrashReportingVersion = "0.1.1"
 
 
     object Android {

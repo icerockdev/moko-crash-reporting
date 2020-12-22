@@ -25,6 +25,5 @@ framework {
 cocoaPods {
     podsProject = file("../ios-app/Pods/Pods.xcodeproj")
 
-    pod("GoogleUtilities", onlyLink = false)
-    pod("FirebaseCrashlytics", onlyLink = true)
+    pod("MCRCDynamicProxy", onlyLink = true)
 }
