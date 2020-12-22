@@ -1,5 +1,5 @@
-![moko-crash-reporting](https://user-images.githubusercontent.com/701307/98647965-37858400-2368-11eb-98e8-6e62d75fa6af.png)  
-[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download](https://api.bintray.com/packages/icerockdev/moko/moko-crash-reporting/images/download.svg) ](https://bintray.com/icerockdev/moko/moko-crash-reporting/_latestVersion) ![kotlin-version](https://img.shields.io/badge/kotlin-1.4.10-orange)
+![moko-crash-reporting](https://user-images.githubusercontent.com/701307/98647965-37858400-2368-11eb-98e8-6e62d75fa6af.png)
+[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download](https://api.bintray.com/packages/icerockdev/moko/moko-crash-reporting/images/download.svg) ](https://bintray.com/icerockdev/moko/moko-crash-reporting/_latestVersion) ![kotlin-version](https://img.shields.io/badge/kotlin-1.4.21-orange)
 
 # Mobile Kotlin crash report
 
@@ -28,6 +28,8 @@ This is a Kotlin MultiPlatform library that provides reporting fatal and non-fat
 ## Versions
 - kotlin 1.4.10
   - 0.1.0
+- kotlin 1.4.21
+  - 0.1.1
 
 ## Installation
 root build.gradle  
@@ -42,9 +44,8 @@ allprojects {
 project build.gradle
 ```groovy
 dependencies {
-    commonMainApi("dev.icerock.moko:crash-reporting-core:0.1.0")
-    commonMainApi("dev.icerock.moko:crash-reporting-crashlytics:0.1.0") // for CrashlyticsLogger
-    commonMainApi("dev.icerock.moko:crash-reporting-napier:0.1.0") // for CrashReportingAntilog
+    commonMainImplementation("dev.icerock.moko:crash-reporting-crashlytics:0.1.1") // for CrashlyticsLogger
+    commonMainImplementation("dev.icerock.moko:crash-reporting-napier:0.1.1") // for CrashReportingAntilog
     commonMainImplementation("com.github.aakira:napier:1.4.1") // for CrashReportingAntilog
 }
 ```
@@ -55,34 +56,29 @@ With [mobile-multiplatform-gradle-plugin](https://github.com/icerockdev/mobile-m
 cocoaPods {
     podsProject = file("ios-app/Pods/Pods.xcodeproj")
 
-    pod("GoogleUtilities", onlyLink = false)
-    pod("FirebaseCrashlytics", onlyLink = true)
+    pod("MCRCDynamicProxy", onlyLink = true)
 }
 ```
 project Podfile
 ```ruby
-pod 'Firebase', '6.33.0'
-pod 'FirebaseCrashlytics', '4.6.1'
-
-# Firebase libraries already linked in moko-crash-reporting. Remove duplicated linking.
-post_install do |installer|
-  host_targets = installer.aggregate_targets.select { |aggregate_target|
-    aggregate_target.name.include? "Pods-"
-  }
-
-  host_targets.each do |host_target|
-    host_target.xcconfigs.each do |config_name, config_file|
-      config_file.frameworks.delete("FirebaseCore")
-      config_file.frameworks.delete("FirebaseCrashlytics")
-      config_file.frameworks.delete("FirebaseInstallations")
-      config_file.frameworks.delete("GoogleDataTransport")
-
-      xcconfig_path = host_target.xcconfig_path(config_name)
-      config_file.save_as(xcconfig_path)
-      end
-  end
-end
+pod 'MCRCDynamicProxy', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.1'
+pod 'MCRCStaticReporter', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.1'
 ```
+
+On iOS side add to `AppDelegate`:
+```swift
+import FirebaseCore
+import MCRCStaticReporter
+
+...
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+    MokoFirebaseCrashlytics.setup()
+    ...
+}
+```
+
 ## Usage
 
 ### CrashlyticsLogger
