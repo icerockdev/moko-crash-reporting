@@ -39,10 +39,10 @@ class Testing {
     }
 
     fun logException() {
-        try {
+        //try {
             "test".toInt()
-        } catch (e: NumberFormatException) {
-            Napier.e(message = "test is not a number", tag = "Non fatal", throwable = e)
-        }
+        //} catch (e: NumberFormatException) {
+        //    Napier.e(message = "test is not a number", tag = "Non fatal", throwable = e)
+       // }
     }
 }

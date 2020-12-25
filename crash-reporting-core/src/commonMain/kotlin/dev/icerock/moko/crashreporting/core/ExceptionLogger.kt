@@ -9,4 +9,5 @@ interface ExceptionLogger {
     fun setCustomValue(value: String, forKey: String)
     fun recordException(throwable: Throwable)
     fun log(message: String)
+    fun logFatal(throwable: Throwable)
 }

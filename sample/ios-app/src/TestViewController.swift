@@ -7,7 +7,12 @@ import MultiPlatformLibrary
 
 class TestViewController: UIViewController {
     
-    let testing = Testing()
+    var testing: Testing!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        testing = Testing()
+    }
     
     @IBAction
     func onSetUserId() {

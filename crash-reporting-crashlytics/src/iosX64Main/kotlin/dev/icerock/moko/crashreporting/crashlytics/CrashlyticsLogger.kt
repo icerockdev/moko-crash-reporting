@@ -3,10 +3,17 @@ package dev.icerock.moko.crashreporting.crashlytics
 import cocoapods.MCRCDynamicProxy.FirebaseCrashlyticsReporterProtocol
 import cocoapods.MCRCDynamicProxy.FirebaseDynamicProxy
 import dev.icerock.moko.crashreporting.core.CrashReportingCore
+import dev.icerock.moko.crashreporting.core.setupUnhandledExceptionsHandler
 import dev.icerock.moko.crashreporting.core.ExceptionLogger
 import dev.icerock.moko.crashreporting.core.getStackTrace
 
 actual class CrashlyticsLogger actual constructor() : ExceptionLogger {
+
+    init {
+        val crashReportingCore = CrashReportingCore
+        crashReportingCore.setupUnhandledExceptionsHandler(this)
+    }
+
     private val reporter: FirebaseCrashlyticsReporterProtocol = FirebaseDynamicProxy.reporter()
         ?: throw IllegalStateException("MokoFirebaseCrashlytics.setup() should be called in swift before creating CrashlyticsLogger")
 
@@ -32,6 +39,10 @@ actual class CrashlyticsLogger actual constructor() : ExceptionLogger {
             value = value,
             forKey = forKey
         )
+    }
+
+    override fun logFatal(throwable: Throwable) {
+        println("TODO: log fatal $throwable")
     }
 
     override fun setUserId(userId: String) {
