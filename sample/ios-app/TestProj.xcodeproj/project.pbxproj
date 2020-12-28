@@ -116,7 +116,8 @@
 				287627FC1F319065007FA12B /* Frameworks */,
 				287627FD1F319065007FA12B /* Resources */,
 				3002F1129AFDA8934843C420 /* [CP] Embed Pods Frameworks */,
-				49EA9D27252EE521005FC8CC /* Firebase */,
+				49EA9D27252EE521005FC8CC /* Firebase Application submit */,
+				45A70C682599BD3F005CF12F /* Firebase MultiPlatformLibrary submit */,
 			);
 			buildRules = (
 			);
@@ -193,7 +194,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestProj/Pods-TestProj-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		49EA9D27252EE521005FC8CC /* Firebase */ = {
+		45A70C682599BD3F005CF12F /* Firebase MultiPlatformLibrary submit */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Firebase MultiPlatformLibrary submit";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/upload-symbols\" -gsp \"${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/GoogleService-Info.plist\" -p ios  \"${DWARF_DSYM_FOLDER_PATH}/MultiPlatformLibrary/MultiPlatformLibrary.framework.dSYM\" --debug\n";
+		};
+		49EA9D27252EE521005FC8CC /* Firebase Application submit */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -204,14 +223,14 @@
 				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
 				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
-			name = Firebase;
+			name = "Firebase Application submit";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n\"${PODS_ROOT}/FirebaseCrashlytics/upload-symbols\" -gsp \"${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/GoogleService-Info.plist\" -p ios  \"${DWARF_DSYM_FOLDER_PATH}/MultiPlatformLibrary.framework.dSYM\" \n";
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\" --debug\n";
 		};
 		B8C78C58767A89D2A1A202F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
