@@ -33,4 +33,9 @@ class TestViewController: UIViewController {
     func onSendException() {
         testing.logException()
     }
+    
+    @IBAction
+    func onSendFatal() {
+        testing.logFatalException()
+    }
 }

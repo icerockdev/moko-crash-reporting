@@ -28,6 +28,14 @@ public class MokoFirebaseCrashlytics: FirebaseCrashlyticsReporter {
     Crashlytics.crashlytics().record(exceptionModel: exceptionModel)
   }
   
+  public func recordFatalException(
+    name: String,
+    reason: String,
+    stackTrace: [UInt]
+  ) {
+    recordException(name: name, reason: reason, stackTrace: stackTrace)
+  }
+  
   public func log(message: String) {
     Crashlytics.crashlytics().log(message)
   }

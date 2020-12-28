@@ -15,5 +15,6 @@ public protocol FirebaseCrashlyticsReporter {
   func setUserId(userId: String)
   func setCustomValue(value: String, forKey: String)
   func recordException(name: String, reason: String, stackTrace: [UInt])
+  func recordFatalException(name: String, reason: String, stackTrace: [UInt])
   func log(message: String)
 }
