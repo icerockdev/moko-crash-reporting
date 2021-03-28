@@ -8,12 +8,14 @@ plugins {
 
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
         google()
 
-        maven { url = uri("https://dl.bintray.com/kotlin/kotlin") }
-        maven { url = uri("https://kotlin.bintray.com/kotlinx") }
-        maven { url = uri("https://plugins.gradle.org/m2/") }
+        jcenter {
+            content {
+                includeGroup("org.jetbrains.trove4j")
+            }
+        }
     }
     dependencies {
         plugin(Deps.Plugins.googleServices)

@@ -14,13 +14,15 @@ object Deps {
     private const val firebaseCoreVersion = "17.4.3"
     private const val firebaseCrashlyticsVersion = "17.1.0"
 
-    const val mokoCrashReportingVersion = "0.1.1"
+    const val mokoCrashReportingVersion = "0.1.2"
 
 
     object Android {
         const val compileSdk = 28
         const val targetSdk = 28
         const val minSdk = 16
+
+        val signing = GradlePlugin(id = "signing")
     }
 
     object Plugins {
