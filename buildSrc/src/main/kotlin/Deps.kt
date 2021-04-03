@@ -3,7 +3,7 @@
  */
 
 object Deps {
-    private const val detektVersion = "1.7.4"
+    private const val detektVersion = "1.15.0"
 
     private const val androidAppCompatVersion = "1.1.0"
     private const val napierVersion = "1.4.1"
@@ -14,7 +14,7 @@ object Deps {
     private const val firebaseCoreVersion = "17.4.3"
     private const val firebaseCrashlyticsVersion = "17.1.0"
 
-    const val mokoCrashReportingVersion = "0.1.1"
+    const val mokoCrashReportingVersion = "0.1.2"
 
 
     object Android {
@@ -32,6 +32,7 @@ object Deps {
 
         val mobileMultiplatform = GradlePlugin(id = "dev.icerock.mobile.multiplatform")
         val mavenPublish = GradlePlugin(id = "org.gradle.maven-publish")
+        val signing = GradlePlugin(id = "signing")
 
         val detekt = GradlePlugin(id = "io.gitlab.arturbosch.detekt", version = detektVersion)
         val iosFramework = GradlePlugin(id = "dev.icerock.mobile.multiplatform.ios-framework")

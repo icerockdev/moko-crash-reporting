@@ -9,9 +9,6 @@ plugins {
     plugin(Deps.Plugins.mavenPublish)
 }
 
-group = "dev.icerock.moko"
-version = Deps.mokoCrashReportingVersion
-
 dependencies {
     commonMainApi(project(":crash-reporting-core"))
 
@@ -19,17 +16,6 @@ dependencies {
 
     androidMainImplementation(Deps.Libs.Android.firebaseCore)
     androidMainImplementation(Deps.Libs.Android.firebaseCrashlytics)
-}
-
-publishing {
-    repositories.maven("https://api.bintray.com/maven/icerockdev/moko/moko-crash-reporting/;publish=1") {
-        name = "bintray"
-
-        credentials {
-            username = System.getProperty("BINTRAY_USER")
-            password = System.getProperty("BINTRAY_KEY")
-        }
-    }
 }
 
 cocoaPods {

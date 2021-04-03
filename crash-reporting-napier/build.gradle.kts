@@ -9,9 +9,6 @@ plugins {
     plugin(Deps.Plugins.mavenPublish)
 }
 
-group = "dev.icerock.moko"
-version = Deps.mokoCrashReportingVersion
-
 dependencies {
     commonMainImplementation(Deps.Libs.MultiPlatform.napier.common)
 
@@ -19,15 +16,4 @@ dependencies {
 
     androidMainImplementation(Deps.Libs.Android.appCompat)
 
-}
-
-publishing {
-    repositories.maven("https://api.bintray.com/maven/icerockdev/moko/moko-crash-reporting/;publish=1") {
-        name = "bintray"
-
-        credentials {
-            username = System.getProperty("BINTRAY_USER")
-            password = System.getProperty("BINTRAY_KEY")
-        }
-    }
 }
