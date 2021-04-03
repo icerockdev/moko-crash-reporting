@@ -49,7 +49,7 @@ project build.gradle
 ```groovy
 dependencies {
     commonMainImplementation("dev.icerock.moko:crash-reporting-crashlytics:0.1.2") // for CrashlyticsLogger
-    commonMainImplementation("dev.icerock.moko:crash-reporting-napier:0.1.1") // for CrashReportingAntilog
+    commonMainImplementation("dev.icerock.moko:crash-reporting-napier:0.1.2") // for CrashReportingAntilog
     commonMainImplementation("com.github.aakira:napier:1.4.1") // for CrashReportingAntilog
 }
 ```
@@ -65,8 +65,8 @@ cocoaPods {
 ```
 project Podfile
 ```ruby
-pod 'MCRCDynamicProxy', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.1'
-pod 'MCRCStaticReporter', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.1'
+pod 'MCRCDynamicProxy', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.2'
+pod 'MCRCStaticReporter', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.2'
 ```
 
 On iOS side add to `AppDelegate`:

@@ -18,6 +18,8 @@ jobs:
         java-version: 1.8
     - name: Cocoapods install
       run: (cd sample/ios-app && pod install)
+    - name: Build K/N cache
+      run: ./gradlew :crash-reporting-core:runCommonizer
     - name: Check library
       run: ./gradlew build publishToMavenLocal syncMultiPlatformLibraryDebugFrameworkIosX64
     - name: Install pods with kotlin
