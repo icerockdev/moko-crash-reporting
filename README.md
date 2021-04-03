@@ -1,5 +1,5 @@
 ![moko-crash-reporting](https://user-images.githubusercontent.com/701307/98647965-37858400-2368-11eb-98e8-6e62d75fa6af.png)
-[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download](https://api.bintray.com/packages/icerockdev/moko/moko-crash-reporting/images/download.svg) ](https://bintray.com/icerockdev/moko/moko-crash-reporting/_latestVersion) ![kotlin-version](https://img.shields.io/badge/kotlin-1.4.21-orange)
+[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download](https://img.shields.io/maven-central/v/dev.icerock.moko/crash-reporting) ](https://repo1.maven.org/maven2/dev/icerock/moko/crash-reporting) ![kotlin-version](https://img.shields.io/badge/kotlin-1.4.31-orange)
 
 # Mobile Kotlin crash report
 
@@ -26,17 +26,21 @@ This is a Kotlin MultiPlatform library that provides reporting fatal and non-fat
 - iOS version 9.0+
 
 ## Versions
+### Bintray
 - kotlin 1.4.10
   - 0.1.0
 - kotlin 1.4.21
   - 0.1.1
+### mavenCentral
+- kotlin 1.4.31
+  - 0.1.2
 
 ## Installation
 root build.gradle  
 ```groovy
 allprojects {
     repositories {
-        maven { url = "https://dl.bintray.com/icerockdev/moko" }
+        mavenCentral()
         maven { url = uri("https://dl.bintray.com/aakira/maven") } // for CrashReportingAntilog
     }
 }
@@ -44,8 +48,8 @@ allprojects {
 project build.gradle
 ```groovy
 dependencies {
-    commonMainImplementation("dev.icerock.moko:crash-reporting-crashlytics:0.1.1") // for CrashlyticsLogger
-    commonMainImplementation("dev.icerock.moko:crash-reporting-napier:0.1.1") // for CrashReportingAntilog
+    commonMainImplementation("dev.icerock.moko:crash-reporting-crashlytics:0.1.2") // for CrashlyticsLogger
+    commonMainImplementation("dev.icerock.moko:crash-reporting-napier:0.1.2") // for CrashReportingAntilog
     commonMainImplementation("com.github.aakira:napier:1.4.1") // for CrashReportingAntilog
 }
 ```
@@ -61,8 +65,8 @@ cocoaPods {
 ```
 project Podfile
 ```ruby
-pod 'MCRCDynamicProxy', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.1'
-pod 'MCRCStaticReporter', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.1'
+pod 'MCRCDynamicProxy', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.2'
+pod 'MCRCStaticReporter', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.2'
 ```
 
 On iOS side add to `AppDelegate`:
