@@ -41,7 +41,7 @@ root build.gradle
 allprojects {
     repositories {
         mavenCentral()
-        maven { url = uri("https://dl.bintray.com/aakira/maven") } // for CrashReportingAntilog
+        jcenter() // for Napier dependency
     }
 }
 ```
