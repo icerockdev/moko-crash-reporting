@@ -1,5 +1,5 @@
 ![moko-crash-reporting](https://user-images.githubusercontent.com/701307/98647965-37858400-2368-11eb-98e8-6e62d75fa6af.png)
-[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download](https://img.shields.io/maven-central/v/dev.icerock.moko/crash-reporting) ](https://repo1.maven.org/maven2/dev/icerock/moko/crash-reporting) ![kotlin-version](https://img.shields.io/badge/kotlin-1.4.31-orange)
+[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download](https://img.shields.io/maven-central/v/dev.icerock.moko/crash-reporting-core) ](https://repo1.maven.org/maven2/dev/icerock/moko/crash-reporting-core) ![kotlin-version](https://img.shields.io/badge/kotlin-1.4.31-orange)
 
 # Mobile Kotlin crash report
 
@@ -41,7 +41,7 @@ root build.gradle
 allprojects {
     repositories {
         mavenCentral()
-        maven { url = uri("https://dl.bintray.com/aakira/maven") } // for CrashReportingAntilog
+        jcenter() // for Napier dependency
     }
 }
 ```
