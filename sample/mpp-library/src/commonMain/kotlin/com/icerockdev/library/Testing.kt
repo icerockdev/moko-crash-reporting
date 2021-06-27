@@ -45,4 +45,8 @@ class Testing {
             Napier.e(message = "test is not a number", tag = "Non fatal", throwable = e)
         }
     }
+
+    fun logFatalException() {
+        "test".toInt()
+    }
 }
