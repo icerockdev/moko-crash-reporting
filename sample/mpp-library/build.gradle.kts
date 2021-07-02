@@ -3,23 +3,31 @@
  */
 
 plugins {
-    plugin(Deps.Plugins.androidLibrary)
-    plugin(Deps.Plugins.kotlinMultiplatform)
-    plugin(Deps.Plugins.mobileMultiplatform)
-    plugin(Deps.Plugins.iosFramework)
+    id("com.android.library")
+    id("android-base-convention")
+    id("detekt-convention")
+    id("org.jetbrains.kotlin.multiplatform")
+    id("dev.icerock.mobile.multiplatform.android-manifest")
+    id("dev.icerock.mobile.multiplatform.ios-framework")
+    id("dev.icerock.mobile.multiplatform.cocoapods")
+}
+
+kotlin {
+    android()
+    ios()
 }
 
 dependencies {
-    commonMainImplementation(Deps.Libs.MultiPlatform.napier.common)
-    commonMainApi(Deps.Libs.MultiPlatform.mokoCrashReportingCore)
-    commonMainApi(Deps.Libs.MultiPlatform.mokoCrashReportingCrashlytics)
-    commonMainApi(Deps.Libs.MultiPlatform.mokoCrashReportingNapier)
+    commonMainImplementation(libs.napier)
+    commonMainApi(projects.crashReportingCore)
+    commonMainApi(projects.crashReportingCrashlytics)
+    commonMainApi(projects.crashReportingNapier)
 }
 
 framework {
-    export(project(":crash-reporting-core"))
-    export(project(":crash-reporting-crashlytics"))
-    export(project(":crash-reporting-napier"))
+    export(projects.crashReportingCore)
+    export(projects.crashReportingCrashlytics)
+    export(projects.crashReportingNapier)
 }
 
 cocoaPods {
