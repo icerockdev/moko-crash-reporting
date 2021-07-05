@@ -1,0 +1,18 @@
+[versions]
+androidAppCompatVersion = "1.2.0"
+napierVersion = "1.4.1"
+googleServicesVersion = "4.3.8"
+firebaseCoreVersion = "17.4.3"
+firebaseCrashlyticsVersion = "17.1.0"
+mokoCrashReportingVersion = "0.2.0"
+
+
+[libraries]
+appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidAppCompatVersion" }
+firebaseCore = { module = "com.google.firebase:firebase-core", version.ref = "firebaseCoreVersion" }
+firebaseCrashlytics = { module = "com.google.firebase:firebase-crashlytics", version.ref = "firebaseCrashlyticsVersion" }
+mokoCrashReportingCore = { module = "dev.icerock.moko:crash-reporting-core", version.ref = "mokoCrashReportingVersion" }
+mokoCrashReportingCrashlytics = { module = "dev.icerock.moko:crash-reporting-crashlytics", version.ref = "mokoCrashReportingVersion" }
+mokoCrashReportingNapier = { module = "dev.icerock.moko:crash-reporting-napier", version.ref = "mokoCrashReportingVersion" }
+napier = { module = "com.github.aakira:napier", version.ref = "napierVersion" }
+googleServices = { module = "com.google.gms:google-services", version.ref = "googleServicesVersion" }

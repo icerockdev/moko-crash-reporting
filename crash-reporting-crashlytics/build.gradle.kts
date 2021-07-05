@@ -3,19 +3,18 @@
  */
 
 plugins {
-    plugin(Deps.Plugins.androidLibrary)
-    plugin(Deps.Plugins.kotlinMultiplatform)
-    plugin(Deps.Plugins.mobileMultiplatform)
-    plugin(Deps.Plugins.mavenPublish)
+    id("multiplatform-library-convention")
+    id("dev.icerock.mobile.multiplatform.android-manifest")
+    id("publication-convention")
+    id("dev.icerock.mobile.multiplatform.cocoapods")
 }
 
 dependencies {
-    commonMainApi(project(":crash-reporting-core"))
+    commonMainApi(projects.crashReportingCore)
 
-    androidMainImplementation(Deps.Libs.Android.appCompat)
-
-    androidMainImplementation(Deps.Libs.Android.firebaseCore)
-    androidMainImplementation(Deps.Libs.Android.firebaseCrashlytics)
+    androidMainImplementation(libs.appCompat)
+    androidMainImplementation(libs.firebaseCore)
+    androidMainImplementation(libs.firebaseCrashlytics)
 }
 
 cocoaPods {
