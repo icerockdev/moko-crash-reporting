@@ -7,13 +7,14 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
     buildFeatures.dataBinding = true
 
     defaultConfig {
-        applicationId = "dev.icerock.moko.samples.crashreporting.debug"
+        applicationId = "dev.icerock.moko.samples.crashreporting"
 
         versionCode = 1
         versionName = "0.1.0"
@@ -21,7 +22,7 @@ android {
 }
 
 dependencies {
-    implementation(libs.googleServises)
+    implementation(libs.googleServices)
     implementation(libs.appCompat)
     implementation(libs.firebaseCore)
     implementation(libs.firebaseCrashlytics)
