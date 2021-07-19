@@ -13,7 +13,6 @@ dependencyResolutionManagement {
         jcenter {
             content {
                 includeGroup("org.jetbrains.kotlinx")
-                includeGroup("com.github.aakira")
             }
         }
     }
