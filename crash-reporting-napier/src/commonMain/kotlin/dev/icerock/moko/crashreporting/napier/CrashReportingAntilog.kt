@@ -4,8 +4,8 @@
 
 package dev.icerock.moko.crashreporting.napier
 
-import com.github.aakira.napier.Antilog
-import com.github.aakira.napier.Napier
+import io.github.aakira.napier.Antilog
+import io.github.aakira.napier.Napier
 import dev.icerock.moko.crashreporting.core.CrashReportingCore
 import dev.icerock.moko.crashreporting.core.ExceptionLogger
 

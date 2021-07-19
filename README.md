@@ -37,9 +37,9 @@ allprojects {
 project build.gradle
 ```groovy
 dependencies {
-    commonMainImplementation("dev.icerock.moko:crash-reporting-crashlytics:2.0.0") // for CrashlyticsLogger
-    commonMainImplementation("dev.icerock.moko:crash-reporting-napier:2.0.0") // for CrashReportingAntilog
-    commonMainImplementation("com.github.aakira:napier:1.4.1") // for CrashReportingAntilog
+    commonMainImplementation("dev.icerock.moko:crash-reporting-crashlytics:2.1.0") // for CrashlyticsLogger
+    commonMainImplementation("dev.icerock.moko:crash-reporting-napier:2.1.0") // for CrashReportingAntilog
+    commonMainImplementation("io.github.aakira:napier:1.5.0") // for CrashReportingAntilog
 }
 ```
 For CrashlyticsLogger need to add FirebaseCrashlytics cocoapod
@@ -54,8 +54,8 @@ cocoaPods {
 ```
 project Podfile
 ```ruby
-pod 'MCRCDynamicProxy', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.2'
-pod 'MCRCStaticReporter', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.2'
+pod 'MCRCDynamicProxy', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.2.1'
+pod 'MCRCStaticReporter', :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.2.1'
 ```
 
 On iOS side add to `AppDelegate`:
