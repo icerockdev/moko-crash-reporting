@@ -4,7 +4,7 @@
 
 package com.icerockdev.library
 
-import com.github.aakira.napier.Napier
+import io.github.aakira.napier.Napier
 import dev.icerock.moko.crashreporting.core.ExceptionLogger
 import dev.icerock.moko.crashreporting.crashlytics.CrashlyticsLogger
 import dev.icerock.moko.crashreporting.napier.CrashReportingAntilog
