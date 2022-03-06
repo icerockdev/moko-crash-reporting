@@ -7,22 +7,24 @@ buildscript {
         mavenCentral()
         google()
         gradlePluginPortal()
-        jcenter()
     }
 
     dependencies {
-        classpath("com.google.gms:google-services:4.3.8")
-        classpath("com.google.firebase:firebase-crashlytics-gradle:2.2.0")
-
-        classpath(":crash-reporting-build-logic")
+        classpath(libs.kotlinGradlePlugin)
+        classpath(libs.androidGradlePlugin)
+        classpath(libs.googleServicesGradlePlugin)
+        classpath(libs.firebaseGradlePlugin)
+        classpath(libs.mokoGradlePlugin)
+        classpath(libs.mobileMultiplatformGradlePlugin)
     }
 }
 
+apply(plugin = "dev.icerock.moko.gradle.publication.nexus")
+
+val mokoVersion = libs.versions.mokoCrashReportingVersion.get()
 allprojects {
-    plugins.withId("org.gradle.maven-publish") {
-        group = "dev.icerock.moko"
-        version = libs.versions.mokoCrashReportingVersion.get()
-    }
+    this.group = "dev.icerock.moko"
+    this.version = mokoVersion
 }
 
 tasks.register("clean", Delete::class).configure {

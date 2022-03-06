@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
     spec.swift_version = '5'
     spec.static_framework = true
 
-    spec.dependency 'FirebaseCrashlytics', '~> 7.3'
+    spec.dependency 'FirebaseCrashlytics', '~> 8.2'
     spec.dependency 'MCRCDynamicProxy'
 
     spec.source_files = "crash-reporting-crashlytics/src/iosMain/swift/StaticReporter/**/*.{h,m,swift}"
