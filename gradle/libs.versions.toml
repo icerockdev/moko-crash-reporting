@@ -1,18 +1,38 @@
 [versions]
+kotlinVersion = "1.6.10"
+
+# android
 androidAppCompatVersion = "1.2.0"
-napierVersion = "1.5.0"
 googleServicesVersion = "4.3.8"
 firebaseCoreVersion = "17.4.3"
 firebaseCrashlyticsVersion = "17.1.0"
-mokoCrashReportingVersion = "0.2.1"
+
+# kotlin multiplatform
+napierVersion = "2.4.0"
+
+# moko
+mokoCrashReportingVersion = "0.3.0"
 
 
 [libraries]
+# android
 appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidAppCompatVersion" }
 firebaseCore = { module = "com.google.firebase:firebase-core", version.ref = "firebaseCoreVersion" }
 firebaseCrashlytics = { module = "com.google.firebase:firebase-crashlytics", version.ref = "firebaseCrashlyticsVersion" }
+googleServices = { module = "com.google.gms:google-services", version.ref = "googleServicesVersion" }
+
+# kotlin multiplatform
+napier = { module = "io.github.aakira:napier", version.ref = "napierVersion" }
+
+# moko
 mokoCrashReportingCore = { module = "dev.icerock.moko:crash-reporting-core", version.ref = "mokoCrashReportingVersion" }
 mokoCrashReportingCrashlytics = { module = "dev.icerock.moko:crash-reporting-crashlytics", version.ref = "mokoCrashReportingVersion" }
 mokoCrashReportingNapier = { module = "dev.icerock.moko:crash-reporting-napier", version.ref = "mokoCrashReportingVersion" }
-napier = { module = "io.github.aakira:napier", version.ref = "napierVersion" }
-googleServices = { module = "com.google.gms:google-services", version.ref = "googleServicesVersion" }
+
+# gradle plugins
+kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinVersion" }
+androidGradlePlugin = { module = "com.android.tools.build:gradle", version = "7.0.4" }
+googleServicesGradlePlugin = { module = "com.google.gms:google-services", version = "4.3.8" }
+firebaseGradlePlugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "2.2.0" }
+mokoGradlePlugin = { module = "dev.icerock.moko:moko-gradle-plugin", version = "0.1.0" }
+mobileMultiplatformGradlePlugin = { module = "dev.icerock:mobile-multiplatform", version = "0.14.0" }

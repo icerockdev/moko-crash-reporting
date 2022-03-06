@@ -3,8 +3,8 @@
  */
 
 plugins {
-    id("android-app-convention")
-    id("kotlin-android")
+    id("dev.icerock.moko.gradle.android.application")
+    id("dev.icerock.moko.gradle.detekt")
     id("kotlin-kapt")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
@@ -14,6 +14,9 @@ android {
     buildFeatures.dataBinding = true
 
     defaultConfig {
+        // multidex required because google services here :(
+        minSdk = 21
+
         applicationId = "dev.icerock.moko.samples.crashreporting"
 
         versionCode = 1

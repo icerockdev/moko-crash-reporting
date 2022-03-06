@@ -3,9 +3,10 @@
  */
 
 plugins {
-    id("multiplatform-library-convention")
-    id("dev.icerock.mobile.multiplatform.android-manifest")
-    id("publication-convention")
+    id("dev.icerock.moko.gradle.multiplatform.mobile")
+    id("dev.icerock.moko.gradle.detekt")
+    id("dev.icerock.moko.gradle.publication")
+    id("dev.icerock.moko.gradle.stub.javadoc")
     id("dev.icerock.mobile.multiplatform.cocoapods")
 }
 
@@ -13,8 +14,8 @@ dependencies {
     commonMainApi(projects.crashReportingCore)
 
     androidMainImplementation(libs.appCompat)
-    androidMainImplementation(libs.firebaseCore)
-    androidMainImplementation(libs.firebaseCrashlytics)
+    androidMainApi(libs.firebaseCore)
+    androidMainApi(libs.firebaseCrashlytics)
 }
 
 cocoaPods {
