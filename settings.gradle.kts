@@ -9,20 +9,12 @@ dependencyResolutionManagement {
     repositories {
         mavenCentral()
         google()
-
-        jcenter {
-            content {
-                includeGroup("org.jetbrains.kotlinx")
-            }
-        }
     }
 }
-
-includeBuild("crash-reporting-build-logic")
-
 
 include(":crash-reporting-core")
 include(":crash-reporting-crashlytics")
 include(":crash-reporting-napier")
+
 include(":sample:android-app")
 include(":sample:mpp-library")

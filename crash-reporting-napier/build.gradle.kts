@@ -3,16 +3,15 @@
  */
 
 plugins {
-    id("multiplatform-library-convention")
-    id("dev.icerock.mobile.multiplatform.android-manifest")
-    id("publication-convention")
+    id("dev.icerock.moko.gradle.multiplatform.mobile")
+    id("dev.icerock.moko.gradle.detekt")
+    id("dev.icerock.moko.gradle.publication")
+    id("dev.icerock.moko.gradle.stub.javadoc")
 }
 
 dependencies {
-    commonMainImplementation(libs.napier)
-
     commonMainApi(projects.crashReportingCore)
+    commonMainApi(libs.napier)
 
     androidMainImplementation(libs.appCompat)
-
 }

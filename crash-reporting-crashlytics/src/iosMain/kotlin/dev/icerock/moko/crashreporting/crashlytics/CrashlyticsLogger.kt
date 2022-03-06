@@ -8,13 +8,14 @@ import dev.icerock.moko.crashreporting.core.getStackTrace
 
 actual class CrashlyticsLogger actual constructor() : ExceptionLogger {
     private val reporter: FirebaseCrashlyticsReporterProtocol = FirebaseDynamicProxy.reporter()
-        ?: throw IllegalStateException("MokoFirebaseCrashlytics.setup() should be called in swift before creating CrashlyticsLogger")
+        ?: throw IllegalStateException(
+            "MokoFirebaseCrashlytics.setup() should be called in swift before creating CrashlyticsLogger"
+        )
 
     override fun log(message: String) {
         reporter.logWithMessage(message)
     }
 
-    @ExperimentalUnsignedTypes
     override fun recordException(throwable: Throwable) {
         val crashReportingCore = CrashReportingCore
         val name = crashReportingCore.getExceptionName(throwable)
