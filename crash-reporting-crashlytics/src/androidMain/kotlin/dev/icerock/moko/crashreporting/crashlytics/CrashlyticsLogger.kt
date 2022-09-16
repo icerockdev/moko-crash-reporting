@@ -18,7 +18,7 @@ actual class CrashlyticsLogger actual constructor() : ExceptionLogger {
     }
 
     override fun setCustomValue(value: String, forKey: String) {
-        FirebaseCrashlytics.getInstance().setCustomKey(value, forKey)
+        FirebaseCrashlytics.getInstance().setCustomKey(forKey, value)
     }
 
     override fun setUserId(userId: String) {
