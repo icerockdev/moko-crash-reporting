@@ -21,7 +21,7 @@ This is a Kotlin MultiPlatform library that provides reporting fatal and non-fat
 
 ## Requirements
 - Gradle version 6.8+
-- Android API 16+
+- Android API 19+
 - iOS version 11.0+
 
 ## Installation

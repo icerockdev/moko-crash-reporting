@@ -11,7 +11,7 @@ firebaseCrashlyticsVersion = "18.2.3"
 napierVersion = "2.6.1"
 
 # moko
-mokoCrashReportingVersion = "0.3.1"
+mokoCrashReportingVersion = "0.4.0"
 
 
 [libraries]
