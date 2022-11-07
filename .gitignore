@@ -10,3 +10,4 @@ Pods
 xcuserdata
 local.properties
 local.gradle
+.DS_Store
