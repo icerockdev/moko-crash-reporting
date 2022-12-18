@@ -1,23 +1,23 @@
 [versions]
-kotlinVersion = "1.6.10"
+kotlinVersion = "1.7.20"
 
 # android
 androidAppCompatVersion = "1.2.0"
-googleServicesVersion = "4.3.8"
-firebaseCoreVersion = "17.4.3"
-firebaseCrashlyticsVersion = "17.1.0"
+googleServicesVersion = "4.3.14"
+firebaseAnalyticsVersion = "21.1.1"
+firebaseCrashlyticsVersion = "18.2.3"
 
 # kotlin multiplatform
-napierVersion = "2.4.0"
+napierVersion = "2.6.1"
 
 # moko
-mokoCrashReportingVersion = "0.3.0"
+mokoCrashReportingVersion = "0.4.0"
 
 
 [libraries]
 # android
 appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidAppCompatVersion" }
-firebaseCore = { module = "com.google.firebase:firebase-core", version.ref = "firebaseCoreVersion" }
+firebaseAnalytics = { module = "com.google.firebase:firebase-analytics", version.ref = "firebaseAnalyticsVersion" }
 firebaseCrashlytics = { module = "com.google.firebase:firebase-crashlytics", version.ref = "firebaseCrashlyticsVersion" }
 googleServices = { module = "com.google.gms:google-services", version.ref = "googleServicesVersion" }
 
@@ -31,8 +31,8 @@ mokoCrashReportingNapier = { module = "dev.icerock.moko:crash-reporting-napier",
 
 # gradle plugins
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinVersion" }
-androidGradlePlugin = { module = "com.android.tools.build:gradle", version = "7.0.4" }
-googleServicesGradlePlugin = { module = "com.google.gms:google-services", version = "4.3.8" }
-firebaseGradlePlugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "2.2.0" }
-mokoGradlePlugin = { module = "dev.icerock.moko:moko-gradle-plugin", version = "0.1.0" }
-mobileMultiplatformGradlePlugin = { module = "dev.icerock:mobile-multiplatform", version = "0.14.0" }
+androidGradlePlugin = { module = "com.android.tools.build:gradle", version = "7.2.2" }
+googleServicesGradlePlugin = { module = "com.google.gms:google-services", version = "4.3.14" }
+firebaseGradlePlugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "2.9.2" }
+mokoGradlePlugin = { module = "dev.icerock.moko:moko-gradle-plugin", version = "0.2.0" }
+mobileMultiplatformGradlePlugin = { module = "dev.icerock:mobile-multiplatform", version = "0.14.2" }

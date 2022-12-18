@@ -27,7 +27,7 @@ android {
 dependencies {
     implementation(libs.googleServices)
     implementation(libs.appCompat)
-    implementation(libs.firebaseCore)
+    implementation(libs.firebaseAnalytics)
     implementation(libs.firebaseCrashlytics)
     implementation(projects.sample.mppLibrary)
 }

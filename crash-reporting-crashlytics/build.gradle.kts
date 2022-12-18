@@ -14,7 +14,7 @@ dependencies {
     commonMainApi(projects.crashReportingCore)
 
     androidMainImplementation(libs.appCompat)
-    androidMainApi(libs.firebaseCore)
+    androidMainApi(libs.firebaseAnalytics)
     androidMainApi(libs.firebaseCrashlytics)
 }
 
