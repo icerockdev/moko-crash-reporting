@@ -30,3 +30,9 @@ cocoaPods {
 
     pod("MCRCDynamicProxy", onlyLink = true)
 }
+
+kotlin.targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget>().configureEach {
+    binaries.withType<org.jetbrains.kotlin.gradle.plugin.mpp.Framework>().configureEach {
+        embedBitcode = org.jetbrains.kotlin.gradle.plugin.mpp.BitcodeEmbeddingMode.DISABLE
+    }
+}
