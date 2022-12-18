@@ -11,7 +11,7 @@ import com.icerockdev.library.Testing
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var testing: Testing
+    private lateinit var testing: Testing
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
