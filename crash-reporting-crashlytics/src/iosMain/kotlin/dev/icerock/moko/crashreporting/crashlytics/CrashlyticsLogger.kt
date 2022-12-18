@@ -17,14 +17,13 @@ actual class CrashlyticsLogger actual constructor() : ExceptionLogger {
     }
 
     override fun recordException(throwable: Throwable) {
-        val crashReportingCore = CrashReportingCore
-        val name = crashReportingCore.getExceptionName(throwable)
-        val stackTrace = crashReportingCore.getStackTrace(throwable)
+        val name: String = CrashReportingCore.getExceptionName(throwable)
+        val stackTrace: List<Long> = CrashReportingCore.getStackTrace(throwable)
 
         reporter.recordExceptionWithName(
             name = name,
             reason = throwable.message.orEmpty(),
-            stackTrace = stackTrace
+            stackTrace =
         )
     }
 
